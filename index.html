@@ -1,15 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Build a Survey Form</title>
+<head>
+  <meta charset="utf-8">
+  <title>Build a Survey Form</title>
   <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <h1 id="title"> Survey Form</h1>
-<p id="description">Survey form to colect important information</p>
-<form id="survey-form" action="index.html" method="post">
+</head>
+<body>
+  <h1 id="title"> Survey Form</h1>
+  <p id="description">Survey form to colect important information</p>
 
-</form>
+  <form  class="survey-form" id="survey-form" action="index.html" method="post">
+    <div class="grid">
+
+
+      <div class="name-label"> <label  id="name-label" for="name">* Name: </label></div>
+      <div class="name">   <input id="name" type="text" name="name" value="" placeholder="what is your name?" required ></div>
+      <div class="email-label">  <label id="email-label" for="email"> * E-mail: </label></div>
+      <div class="email">  <input id="email" type="email" name="email" value="" placeholder="email?"required ></div>
+      <div class="age-label">     <label id="number-label" for="number"> Age: </label></div>
+      <div class="age">    <input id="number" type="number" name="number" value=""min="1" max="125" placeholder="how old are you?"></div>
+
+
+
+
+      <label id="dropdown-list-Q" for="dropdown">Which option best describes your current role? </label>
+      <select id="dropdown" class="dropdown-list" name="dropdown">
+        <option id="dropdown"  value="student">student</option>
+        <option id="dropdown"  value="full time job">full time job</option>
+        <option id="dropdown"  value="full time learner">full time learner</option>
+        <option id="dropdown"  value="other">other</option>
+      </select>
+
+
+
+      <label  id="radio-option-Q" for="radio-option-Q"> How likely is that you would recommend freeCodeCamp to a friend?</label>
+        <div class="radio">   <label for="Definitely"><input type="radio" name="radio-option" value="Definitely" id="Definitely">Definitely</label>
+      <label for="Maybe"><input type="radio" name="radio-option" value="Maybe" id="Definitely">Maybe
+      </label>
+      <label for="Not sure"><input type="radio" name="radio-option" value="Not sure" id="Not sure">Not sure</label></div>
+
+
+
+      <label id="checkbox-Q">Things that should be improved in the future (Check all that apply): </label>
+        <div class="checkbox">  <label for="Front-end Projects"><input value="Front-end Projects" type="checkbox" name="improve"> Front-end Projects</label>
+      <label for="Back-end Projects"><input value="Back-end Projects" type="checkbox" name="improve">Back-end Projects</label>
+      <label for="Data Visualization"><input value="Data Visualization" type="checkbox" name="improve"> Data Visualization</label>
+      <label for="Challenges"><input value="Challenges" type="checkbox" name="improve"> Challenges</label></div>
+
+      <label id="comment-Q" for="comment"> Any Comments or Suggestions?</label>
+      <textarea id="comment" name="name" rows="8" cols="80"></textarea>
+
+ </div>
+
+    <div class="submit">
+     <button id="submit" type="submit">Submit</button></div>
+    </form>
   </body>
-</html>
+  </html>

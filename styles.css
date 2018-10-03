@@ -1,3 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 *{
-  
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #1D1E22;
+
+}
+#survey-form{
+
+  font-family: 'Raleway', sans-serif;
+}
+.grid{
+  max-width: 100%;
+  margin: 30px;
+  padding: 20px;
+  background: #F5F5F5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7,50px);
+  grid-gap: 25px;
+  grid-template-areas:
+  "advert1 content1"
+  "advert2 content2"
+  "advert3 content3"
+  "advert4 content4"
+  "advert5 content5"
+  "advert6 content6"
+  "advert7 content7"
+  ;
+
+}
+
+
+h1{
+  font-family: 'Oswald', sans-serif;
+  color: #F5F5F5;
+  text-align: center;
+  padding: 20px;
+}
+
+#description{
+  font-family: 'Oswald', sans-serif;
+  color: #F5F5F5;
+  text-align: center;
+}
+/* left section */
+.name-label{ text-align: right; grid-area: advert1;  }
+.email-label{text-align: right; grid-area: advert2; }
+.age-label{text-align: right; grid-area: advert3; }
+#dropdown-list-Q{text-align: right; grid-area: advert4; }
+#radio-option-Q{text-align: right; grid-area: advert5; }
+#checkbox-Q{text-align: right; grid-area: advert6;}
+#comment-Q{text-align: right; grid-area: advert7;}
+/*.submit{ grid-area: footer;}*/
+
+/* right section */
+.name{  grid-area: content1;font-size: 16px;}
+.email{  grid-area: content2;}
+.age{  grid-area: content3;}
+.dropdown-list{  grid-area: content4;}
+.radio{  grid-area: content5;}
+.checkbox{    grid-area: content6; }
+#comment{  grid-area: content7;}
+
+.submit{
+  margin: auto;
+  align-items: center;
 }
